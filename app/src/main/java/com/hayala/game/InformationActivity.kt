@@ -5,14 +5,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.hayala.game.databinding.ActivitySignUpBinding
+import com.hayala.game.databinding.ActivityInformationBinding
 
-class SignUpActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySignUpBinding
-
+class InformationActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityInformationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpBinding.inflate(layoutInflater).also { setContentView(it.root) }
+        binding = ActivityInformationBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
 
     }

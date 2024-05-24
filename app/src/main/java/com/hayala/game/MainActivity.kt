@@ -11,15 +11,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
-        binding.btnSignIn.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnSignUp.setOnClickListener {
-            val intent2 = Intent(this, SignUpActivity::class.java)
-            startActivity(intent2)
-        }
-        //Игра "Поле чудес" The Field of Miracles Game
     }
 }

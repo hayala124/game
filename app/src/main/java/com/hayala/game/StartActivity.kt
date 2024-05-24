@@ -1,31 +1,26 @@
 package com.hayala.game
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import com.hayala.game.databinding.ActivityStartBinding
 
 class StartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStartBinding
-   // private lateinit var words: List<>()
-    private lateinit var buttonStart: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStartBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
-        val words = listOf("привет", "пока")
+        binding.textRules.text = "Правила пользования приложением:\n" +
+                "Для начала вам необходимо перейти на следующую страницу, где вы сможете выбрать необходимую вам тему для " +
+                "изучения или повторения материала и ознакомиться с предоставленным материалом"
 
-        buttonStart = binding.buttonStart
-        buttonStart.setOnClickListener { onStartPressed() }
+        binding.btnGoOver.setOnClickListener { onClickButtonGoOver() }
     }
 
-    fun onStartPressed() {
-        buttonStart.visibility = View.GONE
-
+    private fun onClickButtonGoOver() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
-
-   /* fun generationWord() {
-        for(word in )
-    }*/
 }
