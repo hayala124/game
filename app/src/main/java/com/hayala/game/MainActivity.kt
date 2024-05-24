@@ -3,6 +3,7 @@ package com.hayala.game
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.hayala.game.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,5 +12,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
+        binding.btnTypesOfData.setOnClickListener { getInformation(binding.btnTypesOfData) }
+        binding.btnVariables.setOnClickListener { getInformation(binding.btnVariables) }
+        binding.btnOperators.setOnClickListener { getInformation(binding.btnOperators) }
+        binding.btnConditionalExpressions.setOnClickListener { getInformation(binding.btnConditionalExpressions) }
+        binding.btnCycles.setOnClickListener { getInformation(binding.btnCycles) }
+        binding.btnFunction.setOnClickListener { getInformation(binding.btnFunction) }
+        binding.btnCollection.setOnClickListener { getInformation(binding.btnCollection) }
     }
+
+    private fun getInformation(button: Button) {
+        val intent = Intent(this, InformationActivity::class.java)
+        intent.putExtra("textInformation", button.text.toString())
+        startActivity(intent)
+    }
+
 }
