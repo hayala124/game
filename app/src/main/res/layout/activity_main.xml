@@ -83,14 +83,4 @@
         app:layout_constraintTop_toBottomOf="@id/btnFunction"/>
 
 
-    <Button
-        android:id="@+id/btnCheck"
-        style="@style/style_for_button_activity_main"
-        app:cornerRadius="@dimen/cornerRadiusForButton"
-        android:text="Пройти тест"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCollection"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

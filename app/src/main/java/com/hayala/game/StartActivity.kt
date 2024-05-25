@@ -1,5 +1,6 @@
 package com.hayala.game
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,10 +12,6 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStartBinding.inflate(layoutInflater).also { setContentView(it.root) }
-
-        binding.textRules.text = "Правила пользования приложением:\n" +
-                "Для начала вам необходимо перейти на следующую страницу, где вы сможете выбрать необходимую вам тему для " +
-                "изучения или повторения материала и ознакомиться с предоставленным материалом"
 
         binding.btnGoOver.setOnClickListener { onClickButtonGoOver() }
     }
