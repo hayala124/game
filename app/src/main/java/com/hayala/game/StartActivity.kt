@@ -1,5 +1,6 @@
 package com.hayala.game
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +10,11 @@ import com.hayala.game.databinding.ActivityStartBinding
 class StartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStartBinding
     private lateinit var imageView: ImageView
+    private var listImages = listOf("image_2", "image_3", "icon_c_sharp")
+    private val imageNames = ArrayList<String>(listOf("icon_c_sharp", "image_2", "image_3"))
+    private var currentIndex = 0
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStartBinding.inflate(layoutInflater).also { setContentView(it.root) }
@@ -28,24 +33,32 @@ class StartActivity : AppCompatActivity() {
     }
 
     private fun onClickButtonBackArrow() {
-
+        currentIndex--
+        if (currentIndex < 0) {
+            currentIndex = 2
+        }
+        updateImage()
     }
 
     private fun onClickButtonForwardArrow() {
-       /* if (R.id.img1.toString() == imageView.id.toString()) {
-              imageView.setImageResource(R.drawable.fon)
-          }
-          else if (imageView.tag == "fon") {
-              imageView.setImageResource(R.drawable.field_for_letter)
-          }
-          else
-              imageView.setImageResource(R.drawable.icon_c_sharp)
+        currentIndex++
+        if (currentIndex >= imageNames.size) {
+            currentIndex = 0
+        }
+        updateImage()
+    }
 
-        Toast.makeText(applicationContext, imageView.id.toString(), Toast.LENGTH_LONG).show()
-        Toast.makeText(applicationContext, imageViewTag1.toString(), Toast.LENGTH_LONG).show()*/
-        imageView.setImageResource(R.drawable.fon)
+    private fun updateImage() {
+        val imageName = imageNames[currentIndex]
+        imageView.setImageResource(getResourceIdByName(imageName))
+    }
 
-
+    private fun getResourceIdByName(name: String): Int {
+        return try {
+            resources.getIdentifier(name, "drawable", packageName)
+        } catch (e: Exception) {
+            0
+        }
     }
 
     private fun onClickButtonGoOver() {

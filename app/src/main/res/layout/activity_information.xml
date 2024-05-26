@@ -8,206 +8,362 @@
     android:background="@drawable/fon"
     tools:context=".InformationActivity">
 
-    <TextView
-        android:id="@+id/txtInformName"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:freezesText="true"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:gravity="center"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/txtInformation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:freezesText="true"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtInformName"/>
-
-    <TableLayout
-        android:id="@+id/tableTypesOfData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#BBADD5"
-        android:stretchColumns="*"
-        android:visibility="gone"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtInformName">
-
-        <TableRow android:padding="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
-                style="@style/style_for_table_title"
-                android:text="Имя типа" />
+                android:id="@+id/txtInformName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:freezesText="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                style="@style/style_for_table_title"
-                android:text="Размер в битах" />
+                android:id="@+id/txtInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:freezesText="true"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtInformName" />
 
-            <TextView
-                style="@style/style_for_table_title"
-                android:text="Описание" />
+            <TableLayout
+                android:id="@+id/tableTypesOfData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="#BBADD5"
+                android:stretchColumns="*"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtInformName">
 
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_title"
+                        android:text="Имя типа" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="int" />
+                    <TextView
+                        style="@style/style_for_table_title"
+                        android:text="Размер в битах" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="32" />
+                    <TextView
+                        style="@style/style_for_table_title"
+                        android:text="Описание" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Целочисленный" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="int" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="double" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="32" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="64" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Целочисленный" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="С плавающей точкой" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="double" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="float" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="64" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="32" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="С плавающей точкой" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="С плавающей точкой" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="float" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="decimal" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="32" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="128" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="С плавающей точкой" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Финансовый тип" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="decimal" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="long" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="128" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="64" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Финансовый тип" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Длинное целое" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="long" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="bool" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="64" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="8" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Длинное целое" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Логический" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="bool" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="char" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="8" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="16" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Логический" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Символьный" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="char" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="string" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="16" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Символьный" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Строковый тип" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-        <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="string" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="object" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="" />
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="" />
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Строковый тип" />
+                </TableRow>
 
-            <TextView
-                style="@style/style_for_table"
-                android:text="Любые данные" />
-        </TableRow>
+                <TableRow android:padding="10dp">
 
-    </TableLayout>
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="object" />
+
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="" />
+
+                    <TextView
+                        style="@style/style_for_table"
+                        android:text="Любые данные" />
+                </TableRow>
+
+            </TableLayout>
 
 
-    <Button
-        android:id="@+id/btnTest"
-        style="@style/style_for_button_activity_main"
-        android:text="Пройти тест"
-        app:cornerRadius="@dimen/cornerRadiusForButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TableLayout
+                android:id="@+id/tableOperations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:visibility="gone"
+                android:background="#BBADD5"
+                android:stretchColumns="*"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtInformName">
+
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Арифметические" />
+                </TableRow>
+
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="Операция" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="Описание" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="+" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="сложение" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="-" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="вычитание" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="*" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="умножение" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="/" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="деление" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="++" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="инкремент" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="--" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="декремент" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Поразрядные логические" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="&amp;" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="логич. И" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="|" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="л. ИЛИ" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="^" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="л. искл. ИЛИ" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="~" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="л. отрицание" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="~" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="л. отрицание" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="˂˂" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="сдвиг влево" />
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text=">>" />
+                    <TextView
+                        style="@style/style_for_table_2"
+                        android:text="сдвиг вправо" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnTest"
+                style="@style/style_for_button_activity_main"
+                android:layout_marginTop="100dp"
+                android:text="Пройти тест"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/cornerRadiusForButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
