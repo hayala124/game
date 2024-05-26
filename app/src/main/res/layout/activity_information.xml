@@ -8,37 +8,206 @@
     android:background="@drawable/fon"
     tools:context=".InformationActivity">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/txtInformName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:freezesText="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:freezesText="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtInformName"/>
+
+    <TableLayout
+        android:id="@+id/tableTypesOfData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BBADD5"
+        android:stretchColumns="*"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtInformName">
+
+        <TableRow android:padding="10dp">
 
             <TextView
-                android:id="@+id/txtInf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:freezesText="true"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                style="@style/style_for_table_title"
+                android:text="Имя типа" />
 
-            <Button
-                android:id="@+id/btnTest"
-                style="@style/style_for_button_activity_main"
-                android:text="Пройти тест"
-                app:cornerRadius="@dimen/cornerRadiusForButton"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtInf"/>
+            <TextView
+                style="@style/style_for_table_title"
+                android:text="Размер в битах" />
+
+            <TextView
+                style="@style/style_for_table_title"
+                android:text="Описание" />
+
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="int" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="32" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Целочисленный" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="double" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="64" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="С плавающей точкой" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="float" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="32" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="С плавающей точкой" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="decimal" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="128" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Финансовый тип" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="long" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="64" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Длинное целое" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="bool" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="8" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Логический" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="char" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="16" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Символьный" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="string" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Строковый тип" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="object" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="" />
+
+            <TextView
+                style="@style/style_for_table"
+                android:text="Любые данные" />
+        </TableRow>
+
+    </TableLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/btnTest"
+        style="@style/style_for_button_activity_main"
+        android:text="Пройти тест"
+        app:cornerRadius="@dimen/cornerRadiusForButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

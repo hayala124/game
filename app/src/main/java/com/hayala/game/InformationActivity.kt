@@ -2,10 +2,8 @@ package com.hayala.game
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.hayala.game.databinding.ActivityInformationBinding
 import java.util.Locale
 
@@ -14,51 +12,50 @@ class InformationActivity : AppCompatActivity() {
     private lateinit var data: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityInformationBinding.inflate(layoutInflater).also { setContentView(it.root) }
+        binding =
+            ActivityInformationBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
 
         data = intent.getStringExtra("textInformation").toString().lowercase(Locale.getDefault())
-        binding.txtInf.text = data
+        binding.txtInformName.text = data
 
         outputInformation()
     }
 
     @SuppressLint("SetTextI18n")
     private fun outputInformation() {
-        if (data == "типы данных") {
-            binding.txtInf.text = "Самые популярные типы данных:\n" +
-                    "\n" +
-                    "Int - Целые числа в диапазоне от -2,147,483,648 (-2^31) до 2,147,483,647 (2^31- 1)\n" +
-                    "Double - Дробные числа в диапазоне от -1.7E+308 до 1.7E+308\n" +
-                    "String - Текстовая информация\n" +
-                    "Boolean - Хранит либо true, либо false\n\n" +
-                    "Типы, которые используются реже\n\n" +
-                    "Byte - Целые числа в диапазоне от -128 до 127\n" +
-                    "Short - Целые числа в диапазоне от -32768 до 32767\n" +
-                    "Long - Целые числа в диапазоне от -9,223,372,036,854,775,808 (-2^63) до 9,223,372,036,854,775,807 (2^63- 1)\n" +
-                    "Float - Дробные числа в диапазоне от -3.4E+38 до 3.4E+38\n" +
-                    "Char - Символы (текст)\n\n" +
-                    "Изменяемые (mutable) и неизменяемые (immutable) переменные\n\n" +
-                    "val - Неизменяемая (immutable) переменная, то есть та, которую можно инициализировать только один раз\n" +
-                    "var - Изменяемая (mutable) переменная\n"
-        }
-        else if (data == "переменные") {
+        when (data) {
+            "типы данных" -> {
+               /* binding.txtInf.text = "Базовые типы данных:\n\n" +
+                        "int: хранит целое число от -2147483648 до 2147483647\n" +
+                        "bool: хранит значение true или false (логические литералы\n" +
+                        "byte: хранит целое число от 0 до 255\n" +
+                        "float: хранит число с плавающей точкой от -3.4*10^38 до 3.4*10^38\n" +
+                        "double: хранит число с плавающей точкой от ±5.0*10^-324 до ±1.7*10^308\n" +
+                        "decimal: хранит десятичное дробное число\n" +
+                        "char: хранит одиночный символ в кодировке Unicode\n"*/
+                binding.txtInformName.text = "Таблица базовых типов данных"
+                binding.tableTypesOfData.visibility = View.VISIBLE
 
-        }
-        else if (data == "операторы") {
+            }
+            "переменные" -> {
+                binding.txtInformName.text
+            }
+            "операторы" -> {
 
-        }
-        else if (data == "условные выражения") {
+            }
+            "условные выражения" -> {
 
-        }
-        else if (data == "циклы") {
+            }
+            "циклы" -> {
 
-        }
-        else if (data == "функции") {
+            }
+            "функции" -> {
 
-        }
-        else if (data == "коллекции") {
+            }
+            "коллекции" -> {
 
+            }
         }
     }
 }
