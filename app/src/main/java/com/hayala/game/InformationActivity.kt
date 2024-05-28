@@ -61,7 +61,8 @@ class InformationActivity : AppCompatActivity() {
             }
             "условные выражения" -> {
                 binding.txtInformName.text = "Конструкция if else\nи тернарная операция"
-
+                binding.youtubePlayerIfElse.visibility = View.VISIBLE
+                binding.youtubePlayerTernaryOperator.visibility = View.VISIBLE
             }
             "циклы" -> {
 

@@ -389,6 +389,28 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtubePlayerIfElse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:videoId="qrPuaaVGEp4"
+                android:layout_marginTop="100dp"
+                app:autoPlay="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtubePlayerTernaryOperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:videoId="iQhVp4TGf64"
+                android:layout_marginTop="50dp"
+                app:autoPlay="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/youtubePlayerIfElse"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

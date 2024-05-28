@@ -36,7 +36,7 @@ class TestActivity : AppCompatActivity() {
         binding = ActivityTestBinding.inflate(layoutInflater).also { setContentView(it.root) }
         buttonNextQuestion = binding.btnNextAnswer
 
-        questionTextView = binding.textTask
+        questionTextView = binding.textQuestion
         answerEditText = binding.editTextAnswer
 
         displayQuestion()
@@ -45,6 +45,7 @@ class TestActivity : AppCompatActivity() {
     }
 
     private fun displayQuestion() {
+        answerEditText.requestFocus()
         val question = questions[countQuestions]
         questionTextView.text = question.questionText
         answerEditText.setText("")
@@ -69,6 +70,7 @@ class TestActivity : AppCompatActivity() {
                 }
             } else {
                 buttonNextQuestion.text = "Выйти"
+                questionTextView.visibility = View.GONE
                 questionTextView.visibility = View.INVISIBLE
                 answerEditText.visibility = View.INVISIBLE
                 binding.textResult.text = "Правильных ответов ${countRightAnswers} из ${questions.size}"
