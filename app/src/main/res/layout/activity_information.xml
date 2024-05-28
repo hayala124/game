@@ -361,6 +361,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
+
+            <TextView
+                android:id="@+id/textHomework"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Домашнее задание"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/textViewHomework"/>
+
+            <TextView
+                android:id="@+id/textViewHomework"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

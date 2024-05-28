@@ -29,6 +29,8 @@ class InformationActivity : AppCompatActivity() {
                 binding.txtInformName.text = "Таблица базовых типов данных"
                 binding.tableTypesOfData.visibility = View.VISIBLE
                 binding.btnTest.visibility = View.INVISIBLE
+                binding.textHomework.visibility = View.GONE
+                binding.textViewHomework.visibility = View.GONE
             }
             "переменные" -> {
                 binding.txtInformName.text = "Переменные и константы"
@@ -48,13 +50,17 @@ class InformationActivity : AppCompatActivity() {
                         "Константы предназначены для описания таких значений, которые не должны изменяться в программе. Для определения констант используется ключевое слово const, которое указывается перед типом константы:\n\n" +
                         "const string NAME = \"Tom\";\n\n" +
                         "Таким образом, если нам надо хранить в программе некоторые данные, но их не следует изменить, они определяются в виде констант. Если же их можно изменять, то они определяются в виде переменных."
+
+                binding.textViewHomework.text = "Создайте проект в Visual Studio и попробуйте создать различные переменные и константы с разными типами данных."
             }
             "операции" -> {
-                binding.txtInformName.text = "Арифметичсекие и Поразрядные операции"
+                binding.txtInformName.text = "Арифметические и Поразрядные операции"
                 binding.tableOperations.visibility = View.VISIBLE
+                binding.textViewHomework.text = "Со"
 
             }
             "условные выражения" -> {
+                binding.txtInformName.text = "Конструкция if else\nи тернарная операция"
 
             }
             "циклы" -> {

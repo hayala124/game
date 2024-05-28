@@ -19,11 +19,17 @@ class MainActivity : AppCompatActivity() {
         binding.btnCycles.setOnClickListener { getInformation(binding.btnCycles) }
         binding.btnFunction.setOnClickListener { getInformation(binding.btnFunction) }
         binding.btnCollection.setOnClickListener { getInformation(binding.btnCollection) }
+        binding.btnTest.setOnClickListener { takeTest() }
     }
 
     private fun getInformation(button: Button) {
         val intent = Intent(this, InformationActivity::class.java)
         intent.putExtra("textInformation", button.text.toString())
+        startActivity(intent)
+    }
+
+    private fun takeTest() {
+        val intent = Intent(this, TestActivity::class.java)
         startActivity(intent)
     }
 
