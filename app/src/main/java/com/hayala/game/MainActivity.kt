@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnVariables.setOnClickListener { getInformation(binding.btnVariables) }
         binding.btnOperations.setOnClickListener { getInformation(binding.btnOperations) }
         binding.btnConditionalExpressions.setOnClickListener { getInformation(binding.btnConditionalExpressions) }
-        binding.btnCycles.setOnClickListener { getInformation(binding.btnCycles) }
-        binding.btnFunction.setOnClickListener { getInformation(binding.btnFunction) }
-        binding.btnCollection.setOnClickListener { getInformation(binding.btnCollection) }
+        binding.btnCyclesAndFunction.setOnClickListener { getInformation(binding.btnCyclesAndFunction) }
+        binding.btnArray.setOnClickListener { getInformation(binding.btnArray) }
+        binding.btnOop.setOnClickListener { getInformation(binding.btnOop) }
         binding.btnTest.setOnClickListener { takeTest() }
     }
 

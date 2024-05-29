@@ -56,31 +56,32 @@
         app:layout_constraintTop_toBottomOf="@id/btnOperations"/>
 
     <Button
-        android:id="@+id/btnCycles"
+        android:id="@+id/btnCyclesAndFunction"
         style="@style/style_for_button_activity_main"
         app:cornerRadius="@dimen/cornerRadiusForButton"
-        android:text="Циклы"
+        android:text="Циклы и Функции"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnConditionalExpressions"/>
 
     <Button
-        android:id="@+id/btnFunction"
+        android:id="@+id/btnArray"
         style="@style/style_for_button_activity_main"
         app:cornerRadius="@dimen/cornerRadiusForButton"
-        android:text="Функции"
+        android:text="Массивы"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCycles"/>
+        app:layout_constraintTop_toBottomOf="@id/btnCyclesAndFunction"/>
 
     <Button
-        android:id="@+id/btnCollection"
+        android:id="@+id/btnOop"
         style="@style/style_for_button_activity_main"
         app:cornerRadius="@dimen/cornerRadiusForButton"
-        android:text="Коллекции"
+        android:textSize="22sp"
+        android:text="Объектно-ориентированное программирование"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnFunction"/>
+        app:layout_constraintTop_toBottomOf="@id/btnArray"/>
 
 
     <Button

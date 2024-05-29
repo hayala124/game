@@ -21,6 +21,12 @@ class TestActivity : AppCompatActivity() {
     private lateinit var Q: List<Question>
     data class Question(var questionText: String, var correctAnswer: String)
 
+    var question_2 = listOf(
+        Question("Для чего применяются переменные в программе?\n1) для хранения данных,\n2) для передачи данных,\n3) для хранения и передачи данных", "1"),
+        Question("Что определяет то, какого рода информацию может хранить переменная?\n1) имя переменной,\n2) значение переменной,\n3) тип переменной", "3"),
+        Question("Где указывается ключевое слово const?\n1) после типа константы,\n2) перед типом константы", "2")
+        )
+
     var question_1 = listOf(
         Question("Какой размер у типа long?\n1) 32,\n2) 128,\n3) 64,\n4) 8", "3"),
         Question("Какой тип описывает логическую переменную?\n1) int,\n2) float,\n3) long,\n4) bool", "4"),
@@ -82,7 +88,6 @@ class TestActivity : AppCompatActivity() {
                     buttonNextQuestion.text = "Завершить тест"
                 }
             } else if (countQuestions == question.size){
-
                 buttonNextQuestion.text = "Выйти"
                 questionTextView.visibility = View.INVISIBLE
                 binding.textTest.visibility = View.INVISIBLE
@@ -97,6 +102,8 @@ class TestActivity : AppCompatActivity() {
     private fun getTest(data: String) {
         if (data == "типы данных")
             Q = question_1
+        else if (data == "переменные")
+            Q = question_2
         else
             Q = questions
     }
