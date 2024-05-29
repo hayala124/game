@@ -34,27 +34,32 @@
 
             <TextView
                 android:id="@+id/txtInformation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/style_for_textView"
                 android:layout_marginTop="30dp"
-                android:freezesText="true"
-                android:textColor="@color/white"
-                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtInformName" />
+
+            <ImageView
+                android:id="@+id/imageForTypesOfData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/code"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtInformName" />
+                app:layout_constraintTop_toBottomOf="@id/txtInformation"/>
 
             <TableLayout
                 android:id="@+id/tableTypesOfData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="#BBADD5"
                 android:stretchColumns="*"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtInformName">
+                app:layout_constraintTop_toBottomOf="@id/imageForTypesOfData">
 
                 <TableRow android:padding="10dp">
 
@@ -184,7 +189,7 @@
 
                     <TextView
                         style="@style/style_for_table"
-                        android:text="" />
+                        android:text="16" />
 
                     <TextView
                         style="@style/style_for_table"
@@ -208,6 +213,24 @@
 
             </TableLayout>
 
+            <TextView
+                android:id="@+id/textForTypeOfData"
+                style="@style/style_for_textView"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableTypesOfData"/>
+
+            <ImageView
+                android:id="@+id/imageForTypesOfData_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/code_2"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textForTypeOfData" />
 
             <TableLayout
                 android:id="@+id/tableOperations"
@@ -355,12 +378,10 @@
                 style="@style/style_for_button_activity_main"
                 android:layout_marginTop="100dp"
                 android:text="Пройти тест"
-                android:visibility="gone"
                 app:cornerRadius="@dimen/cornerRadiusForButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
-
 
             <TextView
                 android:id="@+id/textHomework"
